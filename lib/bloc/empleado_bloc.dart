@@ -2,17 +2,17 @@ import 'dart:async';
 import 'package:finish_2022/Empleado.dart';
 class EmpleadoBloc{
   List<Empleado> empleadoList =[
-    Empleado(1, "pedro", 1000.0),
-    Empleado(1, "pedro", 1000.0),
-    Empleado(1, "pedro", 1000.0),
-    Empleado(1, "pedro", 1000.0)
+    Empleado(1, "Tomasa", 1000.0),
+    Empleado(2, "Luis", 1000.0),
+    Empleado(3, "Juan", 1000.0),
+    Empleado(4, "Lucas", 1000.0)
   ];
 
 
 //STREAMCONTROLLER
 final _empleadoListStreamController = StreamController<List<Empleado>>();
 final _empleadoSalaryIncrementStreamController = StreamController<Empleado>();
-final _empleadoSalaryDecremetStreamController = StreamController();
+final _empleadoSalaryDecremetStreamController = StreamController<Empleado>();
 
 // Getters: streams y sinks
 Stream <List<Empleado>> get empleadoListStream => _empleadoListStreamController.stream;
